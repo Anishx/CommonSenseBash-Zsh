@@ -1,3 +1,16 @@
+### DEFAULT LOAD PRINT
+echo "Current working dir"
+pwd
+
+### TERMINAL CONFIG
+alias bash="sudo nano ~/.bashrc"
+alias zshconfig="mate ~/.zshrc"
+alias reso="source ~/.bashrc"
+alias zsh="nano ~/.zshrc"
+alias soz="source ~/.zshrc"
+
+### BASE LINUX 
+alias mk="makepkg -si"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias l="ls -l"
@@ -5,22 +18,47 @@ alias cod="codium"
 alias h="history"
 alias c="clear"
 alias move="mv -i"
+
+### OH MY ZSH 
+alias ohmyzsh="mate ~/.oh-my-zsh"
+
+### NPM, YERN, BUN
 alias nrun="npm run dev"
 alias ydev="yarn dev"
-alias editbash="sudo nano ~/.bashrc"
+alias nin=“npm install”
+alias ydev="yarn dev"
+
+### ARCH LINUX 
+alias pain="sudo pacman -Sy"
+alias parm="sudo pacman -Rs"
+alias paup="sudo pacman -Syu"
+
+### CONDA - ML
 alias coac="conda activate"
 alias coin="conda install"
 alias nv="nvidia-smi"
 alias coadd="conda config --add channels"
 alias corm="conda remove -n"
 alias coincf="conda install -c condaforge::"
+
+### CONDA - ML, KERNEL SPECIFIC
 alias cogy="conda activate GymGPU"
 alias coto="conda activate PytorchGPU"
-alias reso="source ~/.bashrc"
-alias pain="sudo pacman -Sy"
-alias parm="sudo pacman -Rs"
-alias paup="sudo pacman -Syu"
+
+### APPLICATIONS 
+alias cod="codium"
 alias dbs="pg_ctl -D /var/lib/postgres/data -l logfile start"
 alias dops="docker ps -l"
 alias dos="docker start"
-alias mk="makepkg -si"
+alias mvin="mvn clean install -DskipTests"
+alias sshos='ssh -oHostKeyAlgorithms=+ssh-rsa -i $1 root@$2'
+alias newapp='bunx --bun create-next-app@latest $1 --typescript --tailwind --eslint'
+
+### Folder alias 
+alias documents='cd /Users/ar/Documents'
+alias downloads='/Users/ar/Downloads'
+alias desktop='/Users/ar/Desktop'
+alias mkcd='function _mkcd() { mkdir -p "$1" && cd "$1"; }; _mkcd'
+
+#Homebrew ENV
+export PATH="/opt/homebrew/bin:$PATH" >> ~/.zshrc
